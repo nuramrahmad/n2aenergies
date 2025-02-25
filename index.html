@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N2A Energies - Sustainable Mineral Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4B5320; /* Army Green */
+            --secondary: #F5F5DC; /* Beige */
+            --accent: #8B4513; /* Saddle Brown (for accents) */
+            --background: #F5F5DC; /* Beige as background */
+            --text: #333; /* Dark text for contrast */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--background);
+            color: var(--text);
+        }
+
+        /* Navbar */
+        .navbar {
+            background: var(--primary);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--secondary);
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('images/1.jpeg') center/cover;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Sections */
+        .section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .section p {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .section-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .section-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        /* News Section */
+        .news-section {
+            background: var(--background);
+        }
+
+        .news-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .news-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .news-card p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .news-card a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Section */
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        /* Career Section */
+        .career-section {
+            background: var(--primary);
+            color: var(--secondary);
+        }
+
+        .career-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .career-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .career-card p {
+            font-size: 0.9rem;
+            color: #ddd;
+        }
+
+        .career-card a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .career-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: var(--secondary);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#operations">Operations</a>
+            <a href="#sustainability">Sustainability</a>
+            <a href="#news">News</a>
+            <a href="#careers">Careers</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Driving Progress Through Sustainable Mining</h1>
+            <p>We are committed to delivering essential materials for a better future while protecting the environment and supporting communities.</p>
+        </div>
+    </section>
+
+
+
+
+
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <h2>About Us</h2>
+    <p>N2A Energies is a leader in sustainable mining, dedicated to unlocking the potential of Nigeria's rich mineral resources. Our mission is to drive economic growth while prioritizing environmental stewardship and community development.</p>
+    <div class="section-grid">
+        <div class="section-card">
+            <img src="images/13.jpeg" alt="Our History">
+            <h3>Our History</h3>
+            <p>Learn about our journey and milestones.</p>
+            <a href="history.html">Read More</a>
+        </div>
+        <div class="section-card">
+            <img src="images/12.jpeg" alt="Our Values">
+            <h3>Our Values</h3>
+            <p>Discover the principles that guide our work.</p>
+            <a href="values.html">Read More</a>
+        </div>
+        <div class="section-card">
+            <img src="/Users/apple/Dropbox/n2nEnergies/15.jpeg" alt="Our Team">
+            <h3>Our Team</h3>
+            <p>Meet the people behind our success.</p>
+            <a href="team.html">Read More</a>
+        </div>
+    </div>
+</section>
+
+
+
+
+  
+    <!-- Operations Section -->
+    <section class="section" id="operations">
+        <h2>Our Operations</h2>
+        <p>We operate state-of-the-art mining facilities across Nigeria, focusing on sustainable extraction of tantalite, lithium, gold, and copper.</p>
+        <div class="section-grid">
+            <div class="section-card">
+                <img src="/Users/apple/Dropbox/n2nEnergies/18-removebg-preview.png" alt="Tantalite Mine">
+                <h3>Tantalite Mine</h3>
+                <p>High-grade tantalum for electronics manufacturing.</p>
+            </div>
+            <div class="section-card">
+                <img src="/Users/apple/Dropbox/n2nEnergies/5.png" alt="Lithium Mine">
+                <h3>Lithium Mine</h3>
+                <p>Battery-grade lithium for green energy solutions.</p>
+            </div>
+            <div class="section-card">
+                <img src="/Users/apple/Dropbox/n2nEnergies/17-removebg-preview.png" alt="Gold Mine">
+                <h3>Gold Mine</h3>
+                <p>LBMA-standard gold reserves.</p>
+            </div>
+            <div class="section-card">
+                <img src="/Users/apple/Dropbox/n2nEnergies/16-removebg-preview.png" alt="Copper">
+                <h3>Copper Mine</h3>
+                <p>Industrial-grade copper deposits</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Section -->
+    <section class="section" id="sustainability">
+        <h2>Sustainability</h2>
+        <p>We are committed to reducing our environmental impact and supporting the communities where we operate.</p>
+        <div class="section-grid">
+            <div class="section-card">
+                <img src="/Users/apple/Dropbox/n2nEnergies/19.jpeg" alt="Environmental Stewardship">
+                <h3>Environmental Stewardship</h3>
+                <p>Reducing our carbon footprint and protecting natural resources.</p>
+                <a href="enviroment.html">Read More</a>
+            </div>
+            <div class="section-card">
+                <img src="/Users/apple/Dropbox/n2nEnergies/21.jpeg" alt="Community Support">
+                <h3>Community Support</h3>
+                <p>Investing in education, healthcare, and local development.</p>
+            </div>
+            <div class="section-card">
+                <img src="/Users/apple/Dropbox/n2nEnergies/22.jpeg" alt="Ethical Practices">
+                <h3>Ethical Practices</h3>
+                <p>Adhering to the highest standards of governance and ethics.</p>
+                <a href="ethical.html">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="section news-section" id="news">
+        <h2>Latest News</h2>
+        <div class="section-grid">
+            <div class="news-card">
+                <h3>New Lithium Discovery</h3>
+                <p>We have discovered a new lithium deposit in Kebbi State, Nigeria. This discovery will significantly boost our production capacity.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="news-card">
+                <h3>Sustainability Award</h3>
+                <p>N2A Energies has been awarded the "Best Sustainable Mining Company" for our efforts in environmental protection.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="news-card">
+                <h3>Community Development</h3>
+                <p>We have launched a new initiative to support local schools and healthcare facilities in Zurú LGA.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section class="section career-section" id="careers">
+        <h2>Careers</h2>
+        <p>Join our team and be part of a company that is shaping the future of sustainable mining.</p>
+        <div class="section-grid">
+            <div class="career-card">
+                <h3>Mining Engineer</h3>
+                <p>We are looking for experienced mining engineers to join our team. Apply now!</p>
+                <a href="#">Apply Now</a>
+            </div>
+            <div class="career-card">
+                <h3>Geologist</h3>
+                <p>We are hiring geologists to help us explore new mineral deposits.</p>
+                <a href="#">Apply Now</a>
+            </div>
+            <div class="career-card">
+                <h3>Environmental Specialist</h3>
+                <p>Join our sustainability team and help us protect the environment.</p>
+                <a href="#">Apply Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <select>
+                        <option>Inquiry Type</option>
+                        <option>General Inquiry</option>
+                        <option>Partnership</option>
+                        <option>Media Inquiry</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea rows="5" placeholder="Message"></textarea>
+                </div>
+                <button class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2023 N2A Energies | Inspired by Rio Tinto</p>
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#operations">Operations</a>
+            <a href="#sustainability">Sustainability</a>
+            <a href="#news">News</a>
+            <a href="#careers">Careers</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N2A Energies - Sustainable Mineral Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #C5A568; /* Gold */
+            --secondary: #2E5E4E; /* Deep Green */
+            --accent: #B87333; /* Copper */
+            --background: #F4F4F4;
+            --text: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--background);
+            color: var(--text);
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('/Users/apple/Dropbox/n2nEnergies/1.jpeg') center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-buttons {
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            margin: 0 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            background: var(--accent);
+        }
+
+        /* Minerals Grid */
+        .minerals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .mineral-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .mineral-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .mineral-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Partnerships Section */
+        .partnerships {
+            background: var(--secondary);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .partner-logos {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .partner-logos img {
+            width: 100px;
+            filter: grayscale(100%);
+            transition: filter 0.3s;
+        }
+
+        .partner-logos img:hover {
+            filter: grayscale(0%);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#minerals">Minerals</a>
+            <a href="#partnerships">Partnerships</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Powering the Future with Sustainable Mineral Solutions</h1>
+            <div class="cta-buttons">
+                <button class="btn btn-primary">Explore Minerals</button>
+                <button class="btn btn-primary">Partner with Us</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Minerals Section -->
+    <section class="minerals-grid" id="minerals">
+        <div class="mineral-card">
+            <img src="/Users/apple/Dropbox/n2nEnergies/7.png" alt="Tantalite">
+            <h3>Tantalite</h3>
+            <p>High-grade tantalum for electronics manufacturing</p>
+            <button class="btn btn-primary">Spec Sheet</button>
+        </div>
+        <div class="mineral-card">
+            <img src="/Users/apple/Dropbox/n2nEnergies/5.png" alt="Lithium">
+            <h3>Lithium</h3>
+            <p>Battery-grade lithium for green energy solutions</p>
+            <button class="btn btn-primary">Spec Sheet</button>
+        </div>
+        <div class="mineral-card">
+            <img src="/Users/apple/Dropbox/n2nEnergies/6.png" alt="Gold">
+            <h3>Gold</h3>
+            <p>LBMA-standard gold reserves</p>
+            <button class="btn btn-primary">Spec Sheet</button>
+        </div>
+        <div class="mineral-card">
+            <img src="/Users/apple/Dropbox/n2nEnergies/8.png" alt="Copper">
+            <h3>Copper</h3>
+            <p>Industrial-grade copper deposits</p>
+            <button class="btn btn-primary">Spec Sheet</button>
+        </div>
+    </section>
+
+    <!-- Partnerships Section -->
+    <section class="partnerships" id="partnerships">
+        <h2>Strategic Partnerships</h2>
+        <p>We work with global leaders in mineral processing and sustainable mining</p>
+        <div class="partner-logos">
+            <img src="/Users/apple/Dropbox/n2nEnergies/9.jpeg" alt="Partner 1">
+            <img src="/Users/apple/Dropbox/n2nEnergies/10.jpeg" alt="Partner 2">
+            <img src="/Users/apple/Dropbox/n2nEnergies/11.jpeg" alt="Partner 3">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-form" id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <div class="form-group">
+                <input type="text" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <select>
+                    <option>Inquiry Type</option>
+                    <option>Off-Take Agreement</option>
+                    <option>Partnership</option>
+                    <option>Media Inquiry</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <textarea rows="5" placeholder="Message"></textarea>
+            </div>
+            <button class="btn btn-primary">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2023 N2A Energies | Plot 58/57 Sharada Small Scale Industries, Kano State</p>
+        <p>© Mine site | Zuru LGA, Kebbi State</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
